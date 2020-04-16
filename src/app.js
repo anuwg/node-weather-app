@@ -11,6 +11,8 @@ app.use(express.static(filePath))
 app.set('view engine', 'hbs')
 app.set('views', viewPath)
 hbs.registerPartials(hbsPath)
+
+const port = process.env.PORT || 3000
 app.get('', (req,res)=>{
     res.render('index', {
         title:'Weather',
@@ -74,6 +76,6 @@ app.get('*',(req,res)=>{
 })
  
 
-app.listen(3000, ()=>{
+app.listen(port, ()=>{
     console.log('port started')
 })
