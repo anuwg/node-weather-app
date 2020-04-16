@@ -59,7 +59,7 @@ app.get('/weather', (req,res)=>{
 
 app.get('/help/*',(req,res)=>{
     res.render('error', {
-        title:'404 error',
+        title:'404 error present',
         value: 'help page not found',
         name: 'anu'
     })
